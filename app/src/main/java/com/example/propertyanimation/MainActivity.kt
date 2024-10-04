@@ -7,6 +7,10 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import android.widget.ImageView
 import android.widget.Button
+import android.animation.ObjectAnimator
+import android.animation.Animator
+import android.animation.AnimatorListenerAdapter
+import android.view.View
 
 
 class MainActivity : AppCompatActivity() {
@@ -57,7 +61,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun rotater() {
+        val animator = ObjectAnimator.ofFloat(star, View.ROTATION, -360f, 0f)
+        animator.duration = 1000
+        animator.addListener(object : AnimatorListenerAdapter() {
+        })
+        animator.start()
     }
+
 
     private fun translater() {
     }
