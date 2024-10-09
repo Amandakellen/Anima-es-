@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
         val animator = ObjectAnimator.ofFloat(star, View.TRANSLATION_X, 200f)
         animator.repeatCount = 1
         animator.repeatMode = ObjectAnimator.REVERSE
-        disableViewDuringAnimation(rotateButton, animator)
+        disableViewDuringAnimation(translateButton, animator)
         animator.start()
 
     }
